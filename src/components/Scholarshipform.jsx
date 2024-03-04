@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Link,useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -28,7 +28,7 @@ export default function Scholarshipform() {
     hscMarks: "",
     cgpa: ""
    });
-   
+   let Navigate = useNavigate()
 
   const onchange = (event) => {
     setCredentials({ ...credentials, [event.target.name]: event.target.value });
@@ -36,7 +36,7 @@ export default function Scholarshipform() {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  console.log("Submitting credentials:", credentials);
+  try {
   // const response = await fetch('-', {
   //     method: 'POST',
   //     headers: {
@@ -44,6 +44,16 @@ const handleSubmit = async (e) => {
   //     },
   //     body: JSON.stringify(credentials),
   //   });
+
+  // if (!response.ok) {
+  //   throw new Error('Network response was not ok');
+  // }
+  const data = await response.json();
+
+ Navigate('/scholarshippage', { state: { data } });
+} catch(err){
+  console.error('There was a problem with the fetch operation:', err);
+}
 
 }
   return (

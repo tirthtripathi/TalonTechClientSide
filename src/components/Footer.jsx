@@ -2,17 +2,16 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-gray-200 py-6">
+    <footer className=" bg-purple-200 py-6">
       <div className="container mx-auto text-center">
         {/* Name of Application */}
-        <h2 className="text-2xl font-bold uppercase tracking-wide mb-4">Your Application Name</h2>
+        <h2 className="text-2xl font-bold uppercase tracking-wide mb-4">Talon-Tech</h2>
 
         {/* Links */}
         <nav className="mb-4">
           <ul className="flex justify-center space-x-4">
-            <li><a href="#" className="text-blue-600 hover:underline">Link 1</a></li>
-            <li><a href="#" className="text-blue-600 hover:underline">Link 2</a></li>
-            <li><a href="#" className="text-blue-600 hover:underline">Link 3</a></li>
+            <li><a href="#" className="text-blue-600 hover:underline">Content</a></li>
+            <li><a href="#" className="text-blue-600 hover:underline">About us</a></li>
           </ul>
         </nav>
 
