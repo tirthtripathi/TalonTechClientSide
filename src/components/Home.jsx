@@ -1,13 +1,14 @@
 import React from 'react'
 import { getImageUrl } from "../../utill"
 import { Link } from 'react-router-dom'
-
+import Featurecard from './Featurecard';
 
 
 export default function Home() {
     return (
-        // Hero Section 
+        
         <div className='mx-20 lg:mx-28 pt-24 min-h-screen'>
+        {/* Hero Section  */}
             <div className='flex font-PrimaryFont items-center justify-center text-3xl font-bold sm:text-5xl'>
                TALON-TECH
             </div>
@@ -21,6 +22,47 @@ export default function Home() {
                     <img className=' shadow-lg h-auto w-full object-cover rounded-xl md:w-Photo' src={getImageUrl('hero/hero.jpg')} alt="Hero Image me" loading="lazy" />
                 </div>
             </div>
+
+            {/* FEATURS Section */}
+            <div className='mx-20 lg:mx-28 mt-28 lg:mt-20'>
+                    <div className='flex font-PrimaryFont font-bold text-5xl items-center justify-center border-b-2 border-black'>
+                        Find With easy
+                    </div>
+                    <div className='flex justify-center items-center text-center mt-2 font-PrimaryFont'>
+                    Say goodbye to endless searching! Talon Tech delves into your profile to pinpoint scholarships perfectly tailored to your qualifications and intrest.
+                    </div>
+                    <div className='grid md:grid-cols-3 gap-20 mt-5'>
+                        <div className=' '>
+                            <Featurecard
+                                imageUrl={getImageUrl('features/scholarship.png')}
+                                alt={"wealth of scholarship"}
+                                title={"wealth of scholarship"}
+                                className="bg-MyGreen"
+                            />
+                        </div>
+
+                        <div className=''>
+                            <Featurecard
+                                imageUrl={getImageUrl('features/loupe.png')}
+                                alt={"simplifies the scholarship search"}
+                                title={"simplifies scholarship search"}
+                                description={"Secure Scheduling Process."}
+                                className="bg-MyYello"
+                            />
+                        </div>
+
+                        <div className=''>
+                            <Featurecard
+                                imageUrl={getImageUrl('features/goal.png')}
+                                alt={"path to success!"}
+                                title={"path to success!"}
+                                description={"Reliable and Trustworthy Process."}
+                                className="bg-MyRed"
+                            />
+                        </div>
+                    </div>
+                </div>
+
         </div>
     )
 }

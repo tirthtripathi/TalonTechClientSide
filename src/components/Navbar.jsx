@@ -15,8 +15,7 @@ export default function Navbar() {
                             <ul className='flex gap-10 justify-center'>
                                 <li><Link to={'/'} className='hover:text-white hover:border-b-2 hover:border-purple-700'> Home </Link></li>
                                 <li><Link to={'/scholarshipform'} className=' hover:text-white hover:border-b-2 hover:border-purple-700'> Find Scholarship</Link></li>
-                                {/* <li><Link to={'/scholarshipform'} className=' hover:text-white hover:border-b-2 hover:border-purple-700'> Login</Link></li>
-                                <li><Link to={'/scholarshipform'} className=' hover:text-white hover:border-b-2 hover:border-purple-700'> Sign-up</Link></li> */}
+                                <li><Link to={'/login'} className=' hover:text-white hover:border-b-2 hover:border-purple-700'> Login</Link></li>
                             </ul>
                         </div>
                     </div>
