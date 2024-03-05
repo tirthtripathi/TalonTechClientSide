@@ -5,7 +5,6 @@ export default function Scholarshippage() {
     const location = useLocation();
     const recommendedData = location.state?.data;
 
-    console.log(recommendedData)
     return (
         <div>
             {recommendedData.map((item, index) => (

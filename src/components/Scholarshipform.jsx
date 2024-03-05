@@ -1,9 +1,11 @@
 import React,{useState} from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 
 
 
 export default function Scholarshipform() {
+
+
   const [credentials, setCredentials] = useState({
     firstName: "",
     middleName: "",
@@ -48,7 +50,7 @@ const handleSubmit = async (e) => {
   // if (!response.ok) {
   //   throw new Error('Network response was not ok');
   // }
-  const data = await response.json();
+  // const data = await response.json();
 
  Navigate('/scholarshippage', { state: { data } });
 } catch(err){
